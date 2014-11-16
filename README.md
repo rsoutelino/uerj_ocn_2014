@@ -1,4 +1,4 @@
 uerj_ocn_2014
 =============
 
-Repositório com o conteúdo do curso.
+Repositório com o conteúdo do curso de **Leitura, análise e gerenciamento de dados científicos usando Python**.
