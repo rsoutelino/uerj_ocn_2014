@@ -3,7 +3,7 @@
 
 #  Curso UERJ - "Python para computação científica, com Ênfase em geociências"
 #  Ministrantes: Andre Lobato e Rafael Soutelino
-
+#  vanessa testando
 #  Curso pyhton - "Analise de Dados Oceanografia - PPG UERJ"
 #  Ministrantes: Rafael Soutelino
 
