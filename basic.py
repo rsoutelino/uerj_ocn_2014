@@ -1,7 +1,7 @@
 #! -*- coding: utf-8 -*-
 
-#  Curso pyhton - "Python para computação científica, com Ênfase em geociências"
-#  Ministrantes: Andre Lobato e Rafael Soutelino
+#  Curso pyhton - "Analise de Dados Oceanografia - PPG UERJ"
+#  Ministrantes: Rafael Soutelino
 #  Nível: Básico ao Avançado
 #  Data: 27/11/2014
 #  Local: UERJ, Rio de Janeiro 
