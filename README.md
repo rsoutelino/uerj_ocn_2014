@@ -36,11 +36,13 @@ Arguments:
 Dados de entrada: ctd_bruto.cnv (default)
 Dados de saída: ctd_tratado.txt (default)
 
+
 Contents: (em construção)
 
 i. Data reading
 
 ii. Data processing
+identificar dados espúrios, preencher falhas, interpolar e gerar série corrigida.
 
 iii. Data plot
 
