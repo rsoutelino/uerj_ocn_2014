@@ -45,7 +45,7 @@ i. Data reading
 
 ii. Data processing
 
-Identifying uncorrelated data, fixing gaps, interpoling and creating a new serie.
+Identifying spurious data, fixing gaps, interpolating and creating a trated serie.
 
 iii. Data plot
 
