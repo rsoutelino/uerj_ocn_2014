@@ -7,7 +7,7 @@
 #  Local: UERJ, Rio de Janeiro 
 #################################################
 #
-# Aula 3445435
+# Aula 1
 # Tópico 1 - Conhendo tipos de objetos Python
 #
 #################################################
