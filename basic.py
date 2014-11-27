@@ -19,7 +19,7 @@
 
 a = 1 #sim
 
-b=3   #preferencialmente não
+b = 3.0   #preferencialmente não
 
 # Não usar letras como nome de variaveis. Use um nome auto explicativo
 # Não começar com numeros
@@ -35,7 +35,8 @@ DATA_DIR = '/Users/rsoutelino/Desktop/CursoPython/'
 
 # bem, isso é um comentário
 
-""" Isso é um comentário
+""" 
+Isso é um comentário
 com 
 múltiplas linhas
 """
