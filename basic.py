@@ -16,7 +16,7 @@
 
 a = 1 #sim
 
-b=2   #preferencialmente não
+b=3   #preferencialmente não
 
 # Não usar letras como nome de variaveis. Use um nome auto explicativo
 # Não começar com numeros
