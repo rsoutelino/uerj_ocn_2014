@@ -3,8 +3,8 @@
 #  Curso pyhton - "Python para computação científica, com Ênfase em geociências"
 #  Ministrantes: Andre Lobato e Rafael Soutelino
 #  Nível: Básico ao Avançado
-#  Data: 25/03/2013
-#  Local: Hotel da Marinha - Arraial do Cabo - RJ 
+#  Data: 27/11/2014
+#  Local: UERJ, Rio de Janeiro 
 #################################################
 #
 # Aula 1
