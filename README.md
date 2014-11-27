@@ -1,5 +1,5 @@
 
-Programa para Leitura, Análise, Tratamento e Plotagem de dados de CTD  
+Program developed for Reading, Analysis, Processing and Ploting of CTD data  
 
 Website: 
 			git@github.com:rsoutelino/uerj_ocn_2014.git 
@@ -28,21 +28,24 @@ Written by Bruno Fonseca (brunofonseca570@gmail.com)
 
 
 
-Função 'argparse' do Python: Função utilizada para interpretar os argumentos
+Python 'argparse' function: used to interpret the arguments. 
 
 Arguments:
 
+Input CTD data are in .cnv format 
+Ex. ctd_bruto.cnv 
 
-Dados de entrada: ctd_bruto.cnv (default)
-Dados de saída: ctd_tratado.txt (default)
+Output data are in .txt format
+Ex. ctd_tratado.txt 
 
 
-Contents: (em construção)
+Contents: 
 
 i. Data reading
 
 ii. Data processing
-identificar dados espúrios, preencher falhas, interpolar e gerar série corrigida.
+
+Identifying uncorrelated data, fixing gaps, interpoling and creating a new serie.
 
 iii. Data plot
 
