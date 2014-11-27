@@ -1,10 +1,10 @@
 #! -*- coding: utf-8 -*-
 
-#  Curso pyhton - "Python para computação científica, com Ênfase em geociências"
-#  Ministrantes: Andre Lobato e Rafael Soutelino
+#  Curso pyhton - "Analise de Dados Oceanografia - PPG UERJ"
+#  Ministrantes: Rafael Soutelino
 #  Nível: Básico ao Avançado
-#  Data: 25/03/2013
-#  Local: Hotel da Marinha - Arraial do Cabo - RJ 
+#  Data: 27/11/2014
+#  Local: UERJ, Rio de Janeiro 
 #################################################
 #
 # Aula 1
@@ -17,7 +17,7 @@
 
 a = 1 #sim
 
-b=2   #preferencialmente não
+b=3   #preferencialmente não
 
 # Não usar letras como nome de variaveis. Use um nome auto explicativo
 # Não começar com numeros
