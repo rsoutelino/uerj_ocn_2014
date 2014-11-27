@@ -1,6 +1,6 @@
 #! -*- coding: utf-8 -*-
 
-#  Curso pyhton - "Python para computação científica, com Ênfase em geociências"
+#  Curso UERJ - "Python para computação científica, com Ênfase em geociências"
 #  Ministrantes: Andre Lobato e Rafael Soutelino
 #  Nível: Básico ao Avançado
 #  Data: 25/03/2013
@@ -16,7 +16,7 @@
 
 a = 1 #sim
 
-b=2   #preferencialmente não
+b = 2   #preferencialmente não
 
 # Não usar letras como nome de variaveis. Use um nome auto explicativo
 # Não começar com numeros
