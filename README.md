@@ -1,8 +1,11 @@
 
 Program developed for Reading, Analysis, Processing and Ploting of CTD data  
 
-Website: 
-			git@github.com:rsoutelino/uerj_ocn_2014.git 
+Github repository website: 
+			
+			http: https://github.com/rsoutelino/uerj_ocn_2014.git
+			ssh: git@github.com:rsoutelino/uerj_ocn_2014.git 
+			Subversion: https://github.com/rsoutelino/uerj_ocn_2014
 
 Written for the course "Reading, Analysis and Processing of Scientific Data using Python" 
 State University of Rio de Janeiro 
