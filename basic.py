@@ -2,7 +2,7 @@
 
 #  Curso pyhton - "Analise de Dados Oceanografia - PPG UERJ"
 #  Ministrantes: Rafael Soutelino
-#  Nível: Básico ao Avançado
+#  Nível: Básico 
 #  Data: 27/11/2014
 #  Local: UERJ, Rio de Janeiro 
 #################################################
