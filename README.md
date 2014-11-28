@@ -48,18 +48,18 @@ Contents:
 
 i. Data reading
 
-1. Download the ctd_bruto.csv file, and put it in the working directory.
-2. Import file and extract data from ctd_bruto.csv
+  1. Download the ctd_bruto.csv file, and put it in the working directory.
+  2. Import file and extract data from ctd_bruto.csv
 
-f=open ('data/ctd_bruto.cnv')
+  f=open ('data/ctd_bruto.cnv')
 
-3. Establish header and data
-    (Exemplo em construção)
+  3. Establish header and data
+      (Exemplo em construção)
 
-4. Create variables 
-press = []
-temp1 = [] 
-temp2 = []
+  4. Create variables 
+  press = []
+  temp1 = [] 
+  temp2 = []
 
 
 ii. Data processing
