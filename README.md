@@ -28,23 +28,39 @@ Written by Bruno Fonseca (brunofonseca570@gmail.com)
            Ana Paula (apmdoin@gmail.com)
 
 
+Library Requirement: 
+          argparser
+          matplotlib.pyplot as plt
 
+Description library used:
+          argparser: used to interpret the arguments.
+          matplotlib.pyplot: plot data
 
+This module can load SeaBird CTD (CNV)
+  Input CTD data are in .cnv format 
+Example: ctd_bruto.cnv 
 
-Python 'argparse' function: used to interpret the arguments. 
-
-Arguments:
-
-Input CTD data are in .cnv format 
-Ex. ctd_bruto.cnv 
-
-Output data are in .txt format
-Ex. ctd_tratado.txt 
+  Output data are in .txt format
+Example: ctd_tratado.txt 
 
 
 Contents: 
 
 i. Data reading
+
+1. Download the ctd_bruto.csv file, and put it in the working directory.
+2. Import file and extract data from ctd_bruto.csv
+
+f=open ('data/ctd_bruto.cnv')
+
+3. Establish header and data
+    (Exemplo em construção)
+
+4. Create variables 
+press = []
+temp1 = [] 
+temp2 = []
+
 
 ii. Data processing
 
