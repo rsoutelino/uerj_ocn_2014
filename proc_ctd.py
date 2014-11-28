@@ -46,7 +46,71 @@ def read_ctd(filename):
 
 def get_downcast():
     pass
+#################################################
+# Pensamos em fazer um loop que fizesse o que função diff do matlab faz (a 
+# diferença entre o valor e seu antecessor). Assim identificariamos quando 
+# o CTD estivesse começando a subir porque os valores seriam negativos.
 
+#### Primeira Tentativa
+
+# down=[]
+# i=-1
+# j=0
+
+# for line in press:
+#   i=i+1
+#   j=j+1
+#   if press[i]<press[j]:
+#       down.append(line)
+
+# Ele está dando erro the 'out of range'... achamos que é porque o índice 
+# j ultrapassa o tamanho do press
+
+# Além disto, precisamos fazer com que o down salve todas as variáveis não 
+# só a pressão
+
+# com o if ele armazena parte dos dados... mas mantem o formato da 
+# variável press, mas com menos dados... achamos que acontece devido às 
+# oscilações dos dados (que não são sempre crescentes ou descrescentes)
+# Por isso pensamos em usar o while
+
+#### Segunda tentativa
+
+# down=[]
+# i=0
+# j=1
+
+# while press[i]<=press[j]:
+#   temp=press[i]
+#   down.append(temp)
+#   i=i+1
+#   j=j+1
+
+# Agora funciona... mas as oscilações cortam logo no começo...
+# Pensamos em criar um limite de aceitação...  
+
+### Terceira tentativa
+
+# down=[]
+# i=0
+# j=1
+
+# while press[j]-press[i]>=-0.2:
+#   temp=press[i]
+#   down.append(temp)
+#   i=i+1
+#   j=j+1
+
+# Mas definir o limite está complicado... pois 0.2 só pega o início..
+# mas 0.25 já pega todos os dados...
+
+# Talvez usar uma média....
+# Mas não conseguimos avançar a partir disto...
+# Esperamos que ajude em algo... ao menos o que não fazer...
+
+# Estas foram as nossas tentativas, mas talvez vocês pensem em algo diferente...
+# Ana Paula, Bruno, Camila, Talitha
+#################################################
 
 def plot(temp, press, filename, sensor):
     plt.plot(temp, press, label=sensor)
