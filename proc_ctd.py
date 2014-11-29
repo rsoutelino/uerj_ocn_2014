@@ -49,6 +49,34 @@ def read_ctd(filename):
 
 def get_downcast():
     pass
+
+    #################################################
+    #   Ai galera, fiz um esboço da ideia que tive:
+    #   Acredito que assim o usuario possa ter mais
+    #    controle na hora de escolher o periodo de
+    #    descida desejado, tendo em vista a dificuldade
+    #    de determinar exatamente o inicio de descida
+    #    e subida.
+    #    
+    #   Ao abrir o grafico, deve-se clicar no ponto de inicio
+    #   e fim (2 clicks no total), respectivamente, afim de fazer 
+    #   o corte da serie, delimitando assim a o momento de 
+    #   descida do ctd apenas
+    #
+    #   plt.ion()
+    #   plt.plot(press)
+    #   lims = plt.ginput(n=2, timeout=60)
+    #   i, f = int(round(lims[0][0])), int(round(lims[1][0]))
+    #   
+    #   down = press[i:f]
+    #   plt.close()
+    #   plt.plot(down, 'r*')
+    #   
+    #   Phellipe
+    ##################################################
+
+
+
 #################################################
 # Pensamos em fazer um loop que fizesse o que função diff do matlab faz (a 
 # diferença entre o valor e seu antecessor). Assim identificariamos quando 
