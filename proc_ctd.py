@@ -48,7 +48,6 @@ def read_ctd(filename):
 
 
 def get_downcast(temp, press):
-
     dlim = press.index(min(press)) # depth limit before upcast
     temp = temp[0:dlim]
     
@@ -147,6 +146,26 @@ def get_downcast(temp, press):
 # Estas foram as nossas tentativas, mas talvez vocês pensem em algo diferente...
 # Ana Paula, Bruno, Camila, Talitha
 #################################################
+
+
+def binage(var, depth, window):
+	dD = window
+	binned_data = []
+
+	depth = np.round(depth)
+	d0 = depth[0] # initial depth
+
+	for k in range(len(depth)):
+		try:
+			di = np.where(depth == d0)[0][0]
+			df = np.where(depth == depth[di] + dD)[0][0]
+			binned_data.append( np.mean( var[di:df] ) )
+			
+			d0 += dD
+		except: IndexError
+
+	return binned_data		
+
 
 def plot(temp, press, filename, sensor):
     plt.plot(temp, press, label=sensor)
