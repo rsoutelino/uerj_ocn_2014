@@ -47,8 +47,12 @@ def read_ctd(filename):
     return press, temp1, temp2, header
 
 
-def get_downcast():
-    pass
+def get_downcast(temp, press):
+
+    dlim = press.index(min(press)) # depth limit before upcast
+    temp = temp[0:dlim]
+    
+    return temp
 
     #################################################
     #   Ai galera, fiz um esboço da ideia que tive:
