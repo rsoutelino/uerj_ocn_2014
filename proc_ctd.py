@@ -1,6 +1,9 @@
+#! -*- coding:utf-8 -*-
+
 # Script para LER dados de CTD, SEPARAR descida, PLOTAR e SALVAR uma figura
 # Autor:  varios
 # Novembro de 2014
+
 import argparse
 import matplotlib.pyplot as plt
 
@@ -68,6 +71,7 @@ def get_downcast():
 
 # Além disto, precisamos fazer com que o down salve todas as variáveis não 
 # só a pressão
+
 
 # com o if ele armazena parte dos dados... mas mantem o formato da 
 # variável press, mas com menos dados... achamos que acontece devido às 
