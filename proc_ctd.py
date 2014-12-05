@@ -4,6 +4,7 @@
 # Autor:  varios
 # Novembro de 2014
 
+# Importando os pacotes que serão utilizados
 import argparse
 import matplotlib.pyplot as plt
 
@@ -17,7 +18,7 @@ filename = args.filename
 figname  = args.figname
 quality  = int(args.quality)
 
-
+# Lendo o arquivo do CTD, separando o cabeçalho dos dados
 def read_ctd(filename):
     f = open(filename)
     lines = f.readlines()
@@ -77,7 +78,9 @@ def get_downcast(temp, press):
     #   
     #   Phellipe
     ##################################################
-
+    # Gostei da sua ideia, tinha pensada em obter a profundidade máxima
+    # automáticamente e cortar os dados ali.
+    # Mas permitir que o usuário tenha controle é bem mais interessante
 
 
 #################################################
@@ -165,7 +168,6 @@ def binage(var, depth, window):
 		except: IndexError
 
 	return binned_data		
-
 
 def plot(temp, press, filename, sensor):
     plt.plot(temp, press, label=sensor)
