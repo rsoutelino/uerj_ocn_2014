@@ -48,107 +48,12 @@ def read_ctd(filename):
     return press, temp1, temp2, header
 
 
-def get_downcast(temp, press):
+def get_downcast(press, temp):
     dlim = press.index(min(press)) # depth limit before upcast
     temp = temp[0:dlim]
+    new_press = press[0:dlim]
     
-    return temp
-
-    #################################################
-    #   Ai galera, fiz um esboço da ideia que tive:
-    #   Acredito que assim o usuario possa ter mais
-    #    controle na hora de escolher o periodo de
-    #    descida desejado, tendo em vista a dificuldade
-    #    de determinar exatamente o inicio de descida
-    #    e subida.
-    #    
-    #   Ao abrir o grafico, deve-se clicar no ponto de inicio
-    #   e fim (2 clicks no total), respectivamente, afim de fazer 
-    #   o corte da serie, delimitando assim a o momento de 
-    #   descida do ctd apenas
-    #
-    #   plt.ion()
-    #   plt.plot(press)
-    #   lims = plt.ginput(n=2, timeout=60)
-    #   i, f = int(round(lims[0][0])), int(round(lims[1][0]))
-    #   
-    #   down = press[i:f]
-    #   plt.close()
-    #   plt.plot(down, 'r*')
-    #   
-    #   Phellipe
-    ##################################################
-    # Gostei da sua ideia, tinha pensada em obter a profundidade máxima
-    # automáticamente e cortar os dados ali.
-    # Mas permitir que o usuário tenha controle é bem mais interessante
-
-
-#################################################
-# Pensamos em fazer um loop que fizesse o que função diff do matlab faz (a 
-# diferença entre o valor e seu antecessor). Assim identificariamos quando 
-# o CTD estivesse começando a subir porque os valores seriam negativos.
-
-#### Primeira Tentativa
-
-# down=[]
-# i=-1
-# j=0
-
-# for line in press:
-#   i=i+1
-#   j=j+1
-#   if press[i]<press[j]:
-#       down.append(line)
-
-# Ele está dando erro the 'out of range'... achamos que é porque o índice 
-# j ultrapassa o tamanho do press
-
-# Além disto, precisamos fazer com que o down salve todas as variáveis não 
-# só a pressão
-
-
-# com o if ele armazena parte dos dados... mas mantem o formato da 
-# variável press, mas com menos dados... achamos que acontece devido às 
-# oscilações dos dados (que não são sempre crescentes ou descrescentes)
-# Por isso pensamos em usar o while
-
-#### Segunda tentativa
-
-# down=[]
-# i=0
-# j=1
-
-# while press[i]<=press[j]:
-#   temp=press[i]
-#   down.append(temp)
-#   i=i+1
-#   j=j+1
-
-# Agora funciona... mas as oscilações cortam logo no começo...
-# Pensamos em criar um limite de aceitação...  
-
-### Terceira tentativa
-
-# down=[]
-# i=0
-# j=1
-
-# while press[j]-press[i]>=-0.2:
-#   temp=press[i]
-#   down.append(temp)
-#   i=i+1
-#   j=j+1
-
-# Mas definir o limite está complicado... pois 0.2 só pega o início..
-# mas 0.25 já pega todos os dados...
-
-# Talvez usar uma média....
-# Mas não conseguimos avançar a partir disto...
-# Esperamos que ajude em algo... ao menos o que não fazer...
-
-# Estas foram as nossas tentativas, mas talvez vocês pensem em algo diferente...
-# Ana Paula, Bruno, Camila, Talitha
-#################################################
+    return new_press, temp
 
 
 def binage(var, depth, window):
@@ -184,9 +89,10 @@ def savefig(figname, quality):
 
 
 press, temp1, temp2, header = read_ctd(filename)
-# press, temp1, temp2 = get_downcast(press, temp1, temp2)
-plot(temp1, press, filename, 'Sensor 1')
-plot(temp2, press, filename, 'Sensor 2')
+new_press, temp1 = get_downcast(press, temp1)
+new_press, temp2 = get_downcast(press, temp2)
+plot(temp1, new_press, filename, 'Sensor 1')
+plot(temp2, new_press, filename, 'Sensor 2')
 savefig(figname, quality=quality)
 plt.show()
 
