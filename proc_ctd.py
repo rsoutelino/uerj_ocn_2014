@@ -49,11 +49,37 @@ def read_ctd(filename):
 
 
 def get_downcast(press, temp):
-    dlim = press.index(min(press)) # depth limit before upcast
-    temp = temp[0:dlim]
-    new_press = press[0:dlim]
+    ''' Separate temperature values measured by CTD in its 
+    descent and rise period.
+
+    Parameters
+    ----------
+    press : array_like
+            pressure or depth
+
+    temp : array_like
+           temperture (any of sensors) 
     
-    return new_press, temp
+    Returns
+    -------
+    p : array_like
+        pressure or depth of ** descent ** period of CTD
+
+    temp : array_like 
+           temperature values measured during ** descent **
+           period of CTD
+
+    Examples
+    --------
+    >>> press = [-5, -6, -7, -8, -9, -10, -9, -8, -7, -6, -5]
+    >>> temp = [27, 26, 25, 24, 23, 22, 23, 24, 25, 26, 27]
+    >>> press_descent, temp_descent = get_downcast(press, temp) '''
+
+    dlim = press.index(min(press)) # looking for maximum depth and defining CTD descent period
+    t = temp[0:dlim] # slicing temp. profile respective to CTD descent period
+    p = press[0:dlim] # slicing pressure profile respective to CTD descent period
+
+    return p, t
 
 
 def binage(var, depth, window):
